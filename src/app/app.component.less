@@ -1,0 +1,68 @@
+.spacer {
+	-webkit-box-flex: 1;
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto;
+}
+
+.red-color {
+	color: red;
+}
+
+.mat-slider-horizontal {
+	width: 100%;
+}
+
+label {
+	display: block;
+	margin: 1.5em 0;
+	font-weight: 700;
+}
+.site-logo-md-toolbar{ padding:0;}
+.site-logo-md-toolbar .site-logo-md-toolbar-logo-row{ height:210px;}
+
+md-toolbar md-toolbar-row{height: 0;}
+.language-md-menu-container{ position: absolute; right:40px;top: 40px;}
+.language-md-menu-item__icon{font-size: 0;}
+
+
+.language-md-menu-container-btn__icon{  font-size: 28px;}
+.language-md-menu-item__icon_english{background: url("/assets/images/language-md-menu-item__icon_english.png");-webkit-background-size:contain; background-size:contain;}
+
+.language-md-menu-item__icon_russian{ background: url("/assets/images/language-md-menu-item__icon_russian.png"); -webkit-background-size:contain; background-size:contain;}
+.site-logo-md-toolbar-logo{ text-align: center;text-decoration: none; color: #fff;}
+.site-logo-md-toolbar-logo__img{ background:url("/assets/images/site-logo-md-toolbar__logo.png") 50% no-repeat;  height: 120px; -webkit-background-size:contain; background-size:contain;
+	width: 120px;  margin: 15px auto;}
+
+.site-logo-md-toolbar .md-nav-list-row{  background-color: rgba(0,0,0,0.08);
+	text-transform: uppercase;
+	height: 48px;}
+.md-nav-list-container{ text-align: center; max-width: 900px; width:100%;}
+.md-nav-list-container .md-nav-list{ padding-top:0;  width: 100%;}
+.md-nav-list .md-nav-list__item{ color: #fff;}
+                                                 
+.mat-tab-body { }
+
+.gallery-row { padding: 10px; flex-wrap: wrap }
+
+.settings-container { padding: 10px; }
+
+
+.gallery-column { margin-bottom: 10px; }
+
+.mat-card-image { }
+@media screen and (min-width: 960px) {
+	.gallery-column{ margin-right:10px;}
+	.gallery-column:nth-child(3n) { margin-right: 0 !important; }
+
+	.gallery-column:last-child { margin-right: 0 !important; max-width: ~"calc(33.333333333% - 6.666px)"; }
+
+	.gallery-column:last-child:nth-child(3n) { margin-right: 0 !important; max-width: 33.333333333% }
+	.gallery-md-card{height: 100%}
+	.gallery-md-card__content{height:38px;overflow: hidden}
+}
+@media screen and (max-width: 959px) {
+	.gallery-column{ display: block!important;}
+
+
+	.gallery-column:last-child:nth-child(3n) { margin-right: 0 !important; max-width: 33.333333333% }
+}

@@ -1,21 +1,121 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo=">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://blog.angular.io//">Angular blog</a></h2>
-  </li>
-</ul>
+<md-toolbar class="site-logo-md-toolbar" color="primary"  fxLayout="column  wrap">
 
-<router-outlet></router-outlet>
+  <md-toolbar-row class="site-logo-md-toolbar-logo-row"><div fxLayoutAlign="center center" fxFlex="100" >                                       
+    <a href="/" class="site-logo-md-toolbar-logo"><div class="site-logo-md-toolbar-logo__img"></div>
+  Kudroff Artem portfolio's
+    </a>
+
+    </div></md-toolbar-row>
+
+  
+
+  <div class="language-md-menu-container"><button class="language-md-menu-container-btn" md-icon-button
+                                                  [mdMenuTriggerFor]="menu">
+    <md-icon class="language-md-menu-container-btn__icon">
+      language
+    </md-icon>
+  </button>
+  <md-menu #menu="mdMenu" class="language-md-menu">
+    <button md-menu-item class="language-md-menu-item">
+      <md-icon class="language-md-menu-item__icon language-md-menu-item__icon_english"></md-icon>
+      <span>English</span>
+    </button>
+    <button md-menu-item class="language-md-menu-item">
+      <md-icon class="language-md-menu-item__icon language-md-menu-item__icon_russian"></md-icon>
+      <span>Russian</span>
+    </button>
+  </md-menu>
+    </div>
+
+
+
+  
+  <md-toolbar-row class="md-nav-list-row">
+  <div fxLayoutAlign="center center"  fxFlex="100" >
+  <div class="md-nav-list-container" >
+    
+    <md-nav-list class="md-nav-list" fxLayoutAlign="space-between center">
+    <a md-list-item class="md-nav-list__item" fxFlex="nogrow" fxLayout="column"
+       *ngFor="let navLink of navLinks"
+       href="{{ navLink.href }}">
+      {{ navLink.label }} </a>
+  </md-nav-list>
+  
+  </div>
+    </div>
+  </md-toolbar-row>
+</md-toolbar>
+
+<app-welcome></app-welcome>
+
+<app-portfolio></app-portfolio>
+
+<app-contact></app-contact>
+
+<md-tab-group>
+  <md-tab label="Gallery">
+    <div class="gallery-row"
+         fxFlex="100%"
+         fxLayout.gt-sm="row wrap" fxLayout="column wrap"
+         fxLayoutAlign="center start">   
+        <div class="gallery-column" fxLayout="row" fxLayout.gt-sm="column"
+             fxFlex="100%" fxFlex.gt-sm="calc(33.3333333% - 10px)"
+             fxFlexAlign.gt-sm="stretch"
+             *ngFor="let spaceScreen of spaceScreens; let i = index">
+        <md-card class="gallery-md-card">
+          <img md-card-image
+               src="{{ spaceScreen.img }}">
+          <md-card-content class="gallery-md-card__content">  
+            {{
+            spaceScreen.description
+            }}
+          </md-card-content>
+          <md-card-actions align="start">
+            <button md-button
+                    (click)="likeMe(i)">
+              <i class="material-icons md-18"
+                 [class.red-color]="spaceScreen.liked == '1'">
+                favorite
+              </i>
+              Loice
+            </button>
+            <button md-button
+                    (click)="deleteMe(i)">
+              <i class="material-icons md-18">
+                delete
+              </i> 
+              Delete
+              me
+            </button>
+          </md-card-actions>
+        </md-card>
+          </div>
+    </div>
+  </md-tab>
+  <md-tab label="Settings">
+    <div class="settings-container"
+         id="page-padding">
+    <h1>Settings</h1>
+    <p>Here you can control the various settings associated with your app. There's no need to hit a save button, as the values are updated automatically.</p>
+    <label>Number of Thumbnails</label>
+    <md-slider [(ngModel)]="modelName"
+               showTicks="true"
+               min="1"
+               max="100"
+               step="1"
+               thumbLabel="true"
+               value="18">
+      
+    </md-slider> 
+
+
+    <md-slide-toggle [(ngModel)]="modelName"
+                     (change)="onChange($event)"
+                     color="primary">
+      SomeSettings
+    </md-slide-toggle>
+    </div>
+  </md-tab>
+</md-tab-group>
+
+                                                
