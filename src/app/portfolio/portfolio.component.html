@@ -1,3 +1,29 @@
-<p>
-  portfolio works!
-</p>
+<div class="portfolio-container"  fxFlex="100%" fxLayout="column wrap" fxLayoutAlign="center start">
+<div class="portfolio-row" 
+     fxLayout.gt-sm="row wrap" fxLayout="column wrap"
+     fxLayoutAlign="center start">   
+        <div class="portfolio-column" fxLayout="row" fxLayout.gt-sm="column"
+             fxFlex="100%" fxFlex.gt-sm="{{ portfolioImage.fxFlexGtSm }}"
+             fxFlexAlign.gt-sm="stretch"
+             *ngFor="let portfolioImage of portfolioImages; let i = index">
+        <md-card class="portfolio-md-card">
+          <img md-card-image
+               src="{{ portfolioImage.img }}">
+          <md-card-content class="portfolio-md-card__content">  
+            {{
+            portfolioImage.description
+            }}
+          </md-card-content>
+          <md-card-actions align="start">
+            <button md-button
+                    (click)="likeMe(i)">
+              <i class="material-icons md-18">
+                visibility
+              </i>
+              View this folio
+            </button>
+          </md-card-actions>
+        </md-card>
+          </div>
+    </div>
+  </div>

@@ -1,4 +1,4 @@
-<md-toolbar class="site-logo-md-toolbar" color="primary"  fxLayout="column  wrap">
+<header class="site-header"><md-toolbar class="site-logo-md-toolbar" color="primary"  fxLayout="column  wrap">
 
   <md-toolbar-row class="site-logo-md-toolbar-logo-row"><div fxLayoutAlign="center center" fxFlex="100" >                                       
     <a href="/" class="site-logo-md-toolbar-logo"><div class="site-logo-md-toolbar-logo__img"></div>
@@ -45,77 +45,16 @@
     </div>
   </md-toolbar-row>
 </md-toolbar>
-
+</header>
 <app-welcome></app-welcome>
-
 <app-portfolio></app-portfolio>
-
 <app-contact></app-contact>
 
-<md-tab-group>
-  <md-tab label="Gallery">
-    <div class="gallery-row"
-         fxFlex="100%"
-         fxLayout.gt-sm="row wrap" fxLayout="column wrap"
-         fxLayoutAlign="center start">   
-        <div class="gallery-column" fxLayout="row" fxLayout.gt-sm="column"
-             fxFlex="100%" fxFlex.gt-sm="calc(33.3333333% - 10px)"
-             fxFlexAlign.gt-sm="stretch"
-             *ngFor="let spaceScreen of spaceScreens; let i = index">
-        <md-card class="gallery-md-card">
-          <img md-card-image
-               src="{{ spaceScreen.img }}">
-          <md-card-content class="gallery-md-card__content">  
-            {{
-            spaceScreen.description
-            }}
-          </md-card-content>
-          <md-card-actions align="start">
-            <button md-button
-                    (click)="likeMe(i)">
-              <i class="material-icons md-18"
-                 [class.red-color]="spaceScreen.liked == '1'">
-                favorite
-              </i>
-              Loice
-            </button>
-            <button md-button
-                    (click)="deleteMe(i)">
-              <i class="material-icons md-18">
-                delete
-              </i> 
-              Delete
-              me
-            </button>
-          </md-card-actions>
-        </md-card>
-          </div>
-    </div>
-  </md-tab>
-  <md-tab label="Settings">
-    <div class="settings-container"
-         id="page-padding">
-    <h1>Settings</h1>
-    <p>Here you can control the various settings associated with your app. There's no need to hit a save button, as the values are updated automatically.</p>
-    <label>Number of Thumbnails</label>
-    <md-slider [(ngModel)]="modelName"
-               showTicks="true"
-               min="1"
-               max="100"
-               step="1"
-               thumbLabel="true"
-               value="18">
-      
-    </md-slider> 
 
-
-    <md-slide-toggle [(ngModel)]="modelName"
-                     (change)="onChange($event)"
-                     color="primary">
-      SomeSettings
-    </md-slide-toggle>
-    </div>
-  </md-tab>
-</md-tab-group>
-
-                                                
+<footer class="site-footer">
+  <md-toolbar class="site-footer-md-toolbar" fxLayout="row" fxLayoutAlign="center center">
+    <span>Footer title</span>
+    
+  </md-toolbar>
+</footer>
+                              
