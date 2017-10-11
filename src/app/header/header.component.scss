@@ -1,0 +1,30 @@
+@import "../../custom_theme.scss";
+.site-logo-md-toolbar .mat-toolbar-row{height: 0;}
+
+.site-logo-md-toolbar{ padding:0; margin-bottom:2rem;
+  @media all and (max-width: 768px)
+  {
+
+  }
+}
+.site-logo-md-toolbar .site-logo-md-toolbar-logo-row{ height:13.125rem;}
+
+md-toolbar md-toolbar-row{height: 0;}
+.language-md-menu-container{ position: absolute; right:2rem;top: 2rem;}
+.language-md-menu-item__icon{font-size: 0;}
+
+
+.language-md-menu-container-btn__icon{  font-size: 1.75rem;}
+.language-md-menu-item__icon_english{background: url("../../assets/images/language-md-menu-item__icon_english.png");-webkit-background-size:contain; background-size:contain;}
+
+.language-md-menu-item__icon_russian{ background: url("../../assets/images/language-md-menu-item__icon_russian.png"); -webkit-background-size:contain; background-size:contain;}
+.site-logo-md-toolbar-logo{ text-align: center;text-decoration: none; color: #fff;}
+.site-logo-md-toolbar-logo__img{ background:url("../../assets/images/site-logo-md-toolbar__logo.png") 50% no-repeat;  height: 7.5rem; -webkit-background-size:contain; background-size:contain;
+  width: 7.5rem;  margin: 0.9375rem auto;}
+
+.site-logo-md-toolbar .md-nav-list-row{  background-color: rgba(0,0,0,0.08);
+  text-transform: uppercase;
+  height: 3rem;}
+.md-nav-list-container{ text-align: center; max-width: 960px; width:100%;}
+.md-nav-list-container .md-nav-list{ padding-top:0;  width: 100%;}
+.md-nav-list .md-nav-list__item{ color: #fff;} 

@@ -1,0 +1,48 @@
+<header class="site-header"><md-toolbar class="site-logo-md-toolbar" color="primary"  fxLayout="column wrap">
+
+  <md-toolbar-row class="site-logo-md-toolbar-logo-row"><div fxLayoutAlign="center center" fxFlex="100" >                                       
+    <a href="/" class="site-logo-md-toolbar-logo"><div class="site-logo-md-toolbar-logo__img"></div>
+  Kudroff Artem portfolio's
+    </a>
+
+    </div></md-toolbar-row>
+
+
+
+  <div class="language-md-menu-container"><button class="language-md-menu-container-btn" md-icon-button
+                                                  [mdMenuTriggerFor]="menu">
+    <md-icon class="language-md-menu-container-btn__icon">
+      language
+    </md-icon>
+  </button>
+  <md-menu #menu="mdMenu" class="language-md-menu">
+    <button md-menu-item class="language-md-menu-item">
+      <md-icon class="language-md-menu-item__icon language-md-menu-item__icon_english"></md-icon>
+      <span>English</span>
+    </button>
+    <button md-menu-item class="language-md-menu-item">
+      <md-icon class="language-md-menu-item__icon language-md-menu-item__icon_russian"></md-icon>
+      <span>Russian</span>
+    </button>
+  </md-menu>
+    </div>
+
+
+
+
+  <md-toolbar-row class="md-nav-list-row">
+  <div fxLayoutAlign="center center"  fxFlex="100" >
+  <div class="md-nav-list-container" >
+    
+    <md-nav-list class="md-nav-list" fxLayoutAlign="space-between center">
+    <a md-list-item class="md-nav-list__item" fxFlex="nogrow" fxLayout="column"
+       *ngFor="let navLink of navLinks"
+       href="{{ navLink.href }}">
+      {{ navLink.label }} </a>
+  </md-nav-list>
+  
+  </div>
+    </div>
+  </md-toolbar-row>
+</md-toolbar>
+</header>

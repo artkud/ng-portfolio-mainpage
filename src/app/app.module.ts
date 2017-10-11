@@ -14,13 +14,17 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
     PortfolioComponent,
-    ContactComponent
+    ContactComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,16 +1,22 @@
 @import "~@angular/material/theming";
+
 @include mat-core();
 
 // My Hero Academia Theme
-$my-app-primary: mat-palette($mat-cyan);
-$my-app-accent:  mat-palette($mat-teal);
-$my-app-warn:    mat-palette($mat-red);
+$my-app-primary: mat-palette($mat-indigo, 500);
+$my-app-accent: mat-palette($mat-orange);
+$my-app-warn: mat-palette($mat-teal);
 
-$my-app-theme:   mat-light-theme(
-								$my-app-primary,
-								$my-app-accent,
-								$my-app-warn
+$my-app-theme: mat-light-theme(
+                $my-app-primary,
+                $my-app-accent,
+                $my-app-warn
 );
 
 // Default Theme
 @include angular-material-theme($my-app-theme);
+
+// Custom Variables
+$my-app-bright-grey: map-get($mat-grey, 200);
+$my-app-dark-grey: map-get($mat-grey, 800);
+                            
