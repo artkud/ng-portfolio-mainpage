@@ -1,4 +1,4 @@
-<h1 mat-dialog-title>Feedback form</h1>
+<h1 mat-dialog-title>Contact me</h1>
 <div mat-dialog-content>
   <form action="">
     <mat-form-field>
@@ -14,13 +14,13 @@
     </mat-error>
   </mat-form-field>
     <mat-form-field>
-      <textarea class="mat-form-textarea" matInput #message placeholder="Message" maxlength="800"></textarea>
+      <textarea class="mat-form-textarea" matInput #message placeholder="Enter message" maxlength="800"></textarea>
       <mat-hint align="start"></mat-hint>
     <mat-hint align="end">{{message.value.length}} / 800</mat-hint>
     </mat-form-field>
   </form>
 </div>
 <div mat-dialog-actions>
-  <button mat-button>Send</button>
-  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button mat-raised-button color="accent">Submit</button>
+  <button mat-button mat-raised-button (click)="onNoClick()">Cancel</button>
 </div>

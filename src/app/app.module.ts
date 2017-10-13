@@ -13,7 +13,6 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {WelcomeComponent} from './welcome/welcome.component';
 import {PortfolioComponent} from './portfolio/portfolio.component';
-import {ContactComponent} from './contact/contact.component';
 import {HeaderComponent} from './header/header.component';
 import {FooterComponent} from './footer/footer.component';
 import {FeedbackFormComponent} from './feedback-form/feedback-form.component';
@@ -24,7 +23,6 @@ import {FeedbackFormDialogComponent} from './feedback-form-dialog/feedback-form-
     AppComponent,
     WelcomeComponent,
     PortfolioComponent,
-    ContactComponent,
     HeaderComponent,
     FooterComponent,
     FeedbackFormComponent,
