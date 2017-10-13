@@ -1,0 +1,26 @@
+<h1 mat-dialog-title>Feedback form</h1>
+<div mat-dialog-content>
+  <form action="">
+    <mat-form-field>
+      <input matInput placeholder="Your name">
+    </mat-form-field>
+    <mat-form-field>
+    <input matInput placeholder="Email" [formControl]="emailFormControl">
+    <mat-error *ngIf="emailFormControl.hasError('pattern')">
+      Please enter a valid email address
+    </mat-error>
+    <mat-error *ngIf="emailFormControl.hasError('required')">
+      Email is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+    <mat-form-field>
+      <textarea class="mat-form-textarea" matInput #message placeholder="Message" maxlength="800"></textarea>
+      <mat-hint align="start"></mat-hint>
+    <mat-hint align="end">{{message.value.length}} / 800</mat-hint>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button>Send</button>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+</div>

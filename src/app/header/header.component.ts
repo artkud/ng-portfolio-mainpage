@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
       label: 'Portfolio',
       href: '/'
     }, {label: 'About', href: '/'}, {label: 'Contact', href: '/'}];
+    
   }
   
   ngOnInit() {

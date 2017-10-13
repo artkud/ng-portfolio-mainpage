@@ -1,48 +1,49 @@
-<header class="site-header"><md-toolbar class="site-logo-md-toolbar" color="primary"  fxLayout="column wrap">
+<header class="site-header"><mat-toolbar class="site-logo-mat-toolbar" color="primary"  fxLayout="column">
 
-  <md-toolbar-row class="site-logo-md-toolbar-logo-row"><div fxLayoutAlign="center center" fxFlex="100" >                                       
-    <a href="/" class="site-logo-md-toolbar-logo"><div class="site-logo-md-toolbar-logo__img"></div>
+  <mat-toolbar-row class="site-logo-mat-toolbar-logo-row"><div fxLayoutAlign="center center" fxFlex="100" >                                       
+    <a href="/" class="site-logo-mat-toolbar-logo"><div class="site-logo-mat-toolbar-logo__img"></div>
   Kudroff Artem portfolio's
     </a>
 
-    </div></md-toolbar-row>
+    </div>
+  </mat-toolbar-row>
 
 
 
-  <div class="language-md-menu-container"><button class="language-md-menu-container-btn" md-icon-button
-                                                  [mdMenuTriggerFor]="menu">
-    <md-icon class="language-md-menu-container-btn__icon">
+  <div class="language-mat-menu-container"><button class="language-mat-menu-container-btn" mat-icon-button
+                                                  [matMenuTriggerFor]="menu">
+    <mat-icon class="language-mat-menu-container-btn__icon">
       language
-    </md-icon>
+    </mat-icon>
   </button>
-  <md-menu #menu="mdMenu" class="language-md-menu">
-    <button md-menu-item class="language-md-menu-item">
-      <md-icon class="language-md-menu-item__icon language-md-menu-item__icon_english"></md-icon>
+  <mat-menu #menu="matMenu" class="language-mat-menu">
+    <button mat-menu-item class="language-mat-menu-item">
+      <mat-icon class="language-mat-menu-item__icon language-mat-menu-item__icon_english"></mat-icon>
       <span>English</span>
     </button>
-    <button md-menu-item class="language-md-menu-item">
-      <md-icon class="language-md-menu-item__icon language-md-menu-item__icon_russian"></md-icon>
+    <button mat-menu-item class="language-mat-menu-item">
+      <mat-icon class="language-mat-menu-item__icon language-mat-menu-item__icon_russian"></mat-icon>
       <span>Russian</span>
     </button>
-  </md-menu>
+  </mat-menu>
     </div>
 
 
 
 
-  <md-toolbar-row class="md-nav-list-row">
+  <mat-toolbar-row class="mat-nav-list-row">
   <div fxLayoutAlign="center center"  fxFlex="100" >
-  <div class="md-nav-list-container" >
+  <div class="mat-nav-list-container" >
     
-    <md-nav-list class="md-nav-list" fxLayoutAlign="space-between center">
-    <a md-list-item class="md-nav-list__item" fxFlex="nogrow" fxLayout="column"
+    <mat-nav-list class="mat-nav-list" fxLayoutAlign="space-between center">
+    <a mat-list-item class="mat-nav-list__item" fxFlex="nogrow" fxLayout="column"
        *ngFor="let navLink of navLinks"
        href="{{ navLink.href }}">
       {{ navLink.label }} </a>
-  </md-nav-list>
+  </mat-nav-list>
   
   </div>
     </div>
-  </md-toolbar-row>
-</md-toolbar>
+  </mat-toolbar-row>
+</mat-toolbar>
 </header>
