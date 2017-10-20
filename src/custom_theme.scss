@@ -19,4 +19,21 @@ $my-app-theme: mat-light-theme(
 // Custom Variables
 $my-app-bright-grey: map-get($mat-grey, 200);
 $my-app-dark-grey: map-get($mat-grey, 800);
+
+//mixins
+@mixin custom-button-theme($my-app-theme) {
+
+  .mat-raised-button.a100, .mat-fab.a100, .mat-mini-fab.a100 {
+    @include _mat-button-theme-color($my-app-theme, 'background-color', 'A100');
+  }
+  .mat-raised-button.a200, .mat-fab.a200, .mat-mini-fab.a200 {
+    @include _mat-button-theme-color($my-app-theme, 'background-color', 'A200');
+  }
+  .mat-raised-button.a400, .mat-fab.a400, .mat-mini-fab.a400 {
+    @include _mat-button-theme-color($my-app-theme, 'background-color', 'A400');
+  }
+  .mat-raised-button.a700, .mat-fab.a700, .mat-mini-fab.a700 {
+    @include _mat-button-theme-color($my-app-theme, 'background-color', 'A700');
+  }
+}
                             

@@ -1,0 +1,12 @@
+@import "../../custom_theme.scss";
+@include custom-button-theme($my-app-theme);  
+.about-container{margin-bottom:2rem;}
+
+.about-row{max-width: 960px; width:100%;  align-self: center;}
+
+
+
+.contact-card{}
+.mat-raised-button{ margin-right: calc(.75rem - 5px); margin-top:.75rem; font-size: 1rem; width:6.625rem;}
+ .contact-card-content__email{ display: block; line-height:28px; vertical-align: top; text-decoration: none; color: rgba(0, 0, 0, 0.87);font-size: 1.1rem}
+.contact-card-content__email .mat-icon{ vertical-align: text-bottom;}

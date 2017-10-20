@@ -1,6 +1,6 @@
 @import "../../custom_theme.scss";
 
-.portfolio-container{ margin-bottom:1rem;}
+.portfolio-container{ padding-bottom:1rem; padding-top:2rem;background-color: $my-app-bright-grey;}
 .portfolio-row { flex-wrap: wrap; max-width: 960px; width:100%;  align-self: center;}
 .portfolio-column { margin-bottom: 1rem; }
                        
@@ -13,8 +13,8 @@
 	.portfolio-column:last-child { margin-right: 0 !important; max-width: calc(33.333333333% - 0.666rem); }
 
 	.portfolio-column:last-child:nth-child(3n) { margin-right: 0 !important; max-width: 33.333333333% }
-	.portfolio-md-card{height: 100%}
-	.portfolio-md-card__content{height:2.375rem;overflow: hidden}
+	.portfolio-mat-card{height: 100%}
+	.portfolio-mat-card__content{height:2.375rem;overflow: hidden}
 }
 @media screen and (max-width: 959px) {
 	.portfolio-column{ display: block!important;}
